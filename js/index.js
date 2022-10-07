@@ -51,6 +51,7 @@ const makeContent = () => {
         newImg.src = chars[char].imgSource
         newDiv.append(newImg)
         /// buttons
+        // this is some wet, squishy code
         let buttonDiv = document.createElement('div')
         buttonDiv.setAttribute('class', 'button-div')
         let statusButton = document.createElement('button')
@@ -83,6 +84,7 @@ const makeContent = () => {
 }
 makeContent()
 
+//bio button funcs
 function showRhaenyraBio (){
     let bio = document.getElementById('Rhaenyra-bio')
     if (bio.style.display === 'none'){
@@ -132,7 +134,7 @@ function showLaenaBio (){
     }
 }
 
-
+//status button funcs
 function showRhaenyraStatus (){
     let bio = document.getElementById('Rhaenyra-status')
     if (bio.style.display === 'none'){
@@ -181,17 +183,8 @@ function showLaenaStatus (){
         bio.style.display = 'none'
     }
 }
-// const bioFunctions = () => {
-//     for (char in chars){
-//         let bio = document.getElementById(chars[char].name.split(' ')[0]+'-bio') 
-        
-//         return bio
-//     }
-//     console.log(bio)
-// }
-// bioFunctions()
 
-// search function runs on keyup from html doc
+// search function runs on keyup from html doc, works with all bio and status text
 const searchFunc = () => {
     let input = document.getElementById('search')
     let filter = input.value.toUpperCase()
